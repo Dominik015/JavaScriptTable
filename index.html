@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="configuration_container">
+        <label for="rows">Sorok száma: </label>
+        <input type="number" name="rows" id="rows" value="8">
+
+        <label for="columns">Oszlopok száma: </label>
+        <input type="number" name="columns" id="columns" value="5">
+
+        <br>
+
+        <input type="checkbox" name="collapse" id="collapse" value="true">
+        <label for="collapse"> cellák összezárása</label>
+
+
+        <br>
+        <label for="border_width">Keret vastagsága</label>
+        <input type="range" name="border_width" id="border_width" value="4" min="1" max="20" onchange="RefreshPX()">
+        <label id="px">4 px</label><br> 
+        <input type="checkbox" id="highlight"><label for="highlight">sor/oszlop kiemelés</label><br>
+        <button onclick="Torles()">Törlés</button>
+
+
+        <br>
+        <button onclick="AddTable()">Felvesz</button>
+
+    </div>
+    <div id="container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
